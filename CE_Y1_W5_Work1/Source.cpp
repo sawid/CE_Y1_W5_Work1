@@ -2,14 +2,15 @@
 
 int main() {
 	char str[100];
-	int i = 0;
+	char* p;
+	p = str;
 	scanf_s("%[^\n]", str, 99);
-	while (str[i] != '\0')
+	while (*p != '\0')
 	{
-		if ( (str[i] >= 'A' && str[i] <= 'Z') || (str[i] >= 'a' && str[i] <= 'z') )
+		if ( (*p >= 'A' && *p <= 'Z') || (*p >= 'a' && *p <= 'z') )
 		{
-			printf("%c", str[i]);
+			printf("%c", *p);
 		}
-		i = i + 1;
+		p = p + 1;
 	}
 }
