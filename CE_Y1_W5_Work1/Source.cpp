@@ -9,7 +9,13 @@ int main() {
 	{
 		if ( (*p >= 'A' && *p <= 'Z') || (*p >= 'a' && *p <= 'z') )
 		{
-			printf("%c", *p);
+			if ((*p >= 'A' && *p <= 'Z')) {
+				printf("%c", *p + 32);
+			}
+			else if ((*p >= 'a' && *p <= 'z')) {
+				printf("%c", *p - 32);
+			}
+			
 		}
 		p = p + 1;
 	}
